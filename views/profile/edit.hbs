@@ -1,0 +1,32 @@
+<div  class="page mt-5">
+<div class="subpage">
+
+<form method="POST" class="sign-up-form" enctype="multipart/form-data">
+  
+  <div class="form-group" >
+  <input
+    id="input-name" class="form-control"
+    type="text"
+    placeholder="First and Last Name"
+    name="name"
+    value="{{ user.name }}" required minlength="3" maxlength="200">
+  </div>
+
+ <div class="form-group">
+  <input
+    id="input-email" class="form-control"
+    type="email"
+    placeholder="Email"
+    name="email"
+    value="{{ user.email }}" required minlength="5">
+  </div>
+
+   <div class="profile">
+  <!-- PROFILE PICTURE UPDATE -->
+  <img src="{{user.profilePicture}}" alt="profile-pic" style="width: 40px;height:40px;margin-left:2px;">
+  <input type="file"  name="profilePicture" id="input-profilePicture">
+  </div>
+
+
+  <button class="pinkbuton" style="color:white; font-size:12px;padding:6px 30px; margin-top:25px;">EDIT</button>
+</form>

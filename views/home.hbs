@@ -1,0 +1,161 @@
+<br>
+<br>
+<div class="charitycenters">
+  <div class="container" >
+<div class="row" style="display:flex;">
+
+  <div id="carousel" class="col-xl-7 col-lg-9 col-md-11 col-sm-9 col-12 " style="margin:0 auto;" style="margin:0 auto;">
+  
+<div class="img-slider">
+      <div class="slide active">
+        <img src="1.jpg" alt="">
+        <div class="info">
+          <h2>VAMOS AJUDAR O MUNDO À NOSSA VOLTA.</h2>
+            <h5>COMEÇANDO COM UMA PEQUENA DOAÇÃO.</H5>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="">
+        <div class="info">
+          <h2 style="color:rgb(65, 65, 65)">PARTICIPA NO LEILÃO SOLIDÁRIO</h2>
+          <h5 style="color:rgb(66, 66, 66)">
+         VEM DIVERTIR-TE CONNOSCO E CONVIDA OUTROS A PARTICIPAR!</div>
+      </div>
+      <div class="slide">
+        <img src="3.png" alt="">
+        <div class="info">
+          <h2>COVID-19</h2>
+          <h5>A PANDEMIA COVID-19 SÓ VEIO PIORAR A SITUAÇÃO ECONÓMICA DE MUITOS PORTUGUESES.</h5>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="">
+        <div class="info">
+          <h2>NESTE NATAL, AJUDA QUEM MAIS PRECISA</h2>
+        <h5>AJUDANDO O BANCO ALIMENTAR CONTRA A FOME.</h5>
+        </div>
+      </div>
+    
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 7000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+
+  </div>
+
+
+   <div id="post-carousel" class="col-xl-4 col-lg-10 col-md-9 col-sm-9 col-10" style="margin:0 auto;">
+    <h3 id="home-text" style="margin-left:-40px;color:#ff4141;">VAMOS AJUDAR O MUNDO, UMA AÇÃO DE CADA VEZ!</h3>
+      <ul>
+         <li class="li-text" style="margin-top:15px;">A pandemia covid-19 e as medidas decretadas para conter a propagação desta, causaram um nefasto impacto económico em muitas pessoas e muitas famílias.</h5>
+        Juntam-se a estas, todas as outras famílias carenciadas.<a href="https://www.bancoalimentar.pt/quem-somos/pagina-noticias/noticias-federacao/alimentestaideia/"> Leia a notícia aqui!</a></li>
+       
+        <li  class="li-text" style="margin-top:15px;">
+           Para incentivar à solidariedade e entreajuda, queremos fazer contigo um leilão solidário, em que cada pessoa contribui com um objecto para leiloar, as licitações serão em valor fictício, que se traduzem em alimentos para doar.
+        </li>
+          <li  class="li-text" style="margin-top:15px;">
+           O utilizador que licitar o valor mais alto, fica com o objecto para si mas deverá retribuir em alimentos para doar.
+        </li>
+         <li  class="li-text" style="margin-top:15px;">
+        VAMOS AJUDAR O BANCO ALIMENTAR CONTRA A FOME</li>
+
+          </ul>
+     <h5 style="margin-left:-40px;"> <a href="https://www.alimentestaideia.pt/" style="color:#38795b;"> ALIMENTE ESTA IDEIA. DOE AQUI! </a>
+      </h5>
+     
+  </div>
+
+  {{#if user}}
+  <div class="container mt-4" style="margin:0 auto;">
+  <div id="post-order"class="post-slider">
+    <div class="post-wrapper" >
+  {{#each posts}}
+  <div class="post">
+    {{> post}}
+    <div class="overlay-image">
+      <a href="/post/{{ _id }}">
+        <div class="text-home">
+          <h5 style="margin:0 auto;margin-top:8px;letter-spacing:0;line-height:1;height:65px;" class="text-stroke" > {{title}}</h5> <br>
+       <div style="">
+    
+       <div>
+       <h6 style="" class="overlay-pink-button">LICITAR</h6></div>
+       </div>
+       </div></a>
+    </div>
+     </div>
+  {{/each}}
+    </div>
+  </div>
+</div>
+ {{/if}}
+
+
+
+    
+  </div>
+</div></div></div>
+
+
+
+
+

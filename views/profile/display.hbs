@@ -1,0 +1,40 @@
+
+<div class="container">
+
+<div class="row" id="profile-row" >
+  <div id="sticky-div" class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12 col-12 mt-1" >
+
+<img src="{{profile.profilePicture}}" alt="profile-image" class="profile-image" >
+</div>
+
+
+
+<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12 col-12" style="margin-left:10px;">
+
+<h5 class="profilename">{{profile.name}}<a style="margin-left:10px;" href="/profile/edit"><i class="far fa-edit" style="color:#f983d6"></i></a></h5>
+
+<p class="profilename">{{profile.email}}<a style="margin-left:10px;line-height:2" href="/profile/edit"><i class="far fa-edit" style="color:#f983d6"></i></a></p>
+  <h5 class="gifts">MEUS OBJECTOS PARA DOAÇÃO:</h5>
+
+<div class="post-profile-container">
+  {{#each posts}}
+    <div class="post-profile" >
+       <a href="/post/{{ _id }}">
+      <div class="middle">
+        <div class="text"><i class="fas fa-external-link-alt"></i></div>
+      </div>
+      </a>
+   
+    {{> post}}
+    </div>
+  {{/each}}
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+

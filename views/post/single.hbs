@@ -1,0 +1,70 @@
+
+<div class="container" id="post-page-div">
+<div class="row" >
+  <div class="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-xs-12 col-12 mt-2" id="auction-image" style="margin:0 auto;">
+  {{#if post.photo}}
+    <img height="310px" src="{{post.photo}}" />
+  {{/if}}
+  </div>
+
+<div class="col-xl-4 col-lg-4 col-md-5 col-sm-11 col-xs-11 col-12 mt-2" id="col-bid">
+  <h3>{{ post.title }}</h3>
+ <span>DE &nbsp;{{ post.yourName }}</span>
+  <p style="margin-top:20px">{{ post.content }}</p>
+  <form method="POST" action='/post/{{post.id}}'>
+
+<div class="sign">
+
+<div class="comment-bid">
+  <input type="number" name="content" min="1" placeholder="1" required minlength="1" maxlength="3"></textarea> 
+  </div>
+ 
+  <button class="bid-button">LICITAR</button>
+
+
+ 
+</div></form>
+
+
+</div>
+<div class="col-xl-4 col-lg-4 col-md-11 col-sm-9 col-xs-10 col-12 mt-1" id="bids-list">
+ {{#if comment}}
+  <div >
+<h6 style="text-align: center;font-size:14px;" class="highest-bid-pink">LICITAÇÂO MAIS ALTA:&nbsp;<strong>{{maxNumber}}</strong></h6>
+{{/if}}</div>
+
+{{#each comment}}
+
+  <div class="d-flex">
+ 
+     <div class="bids" >
+
+       <div >
+         <img src="{{creator.profilePicture}}" alt="image" style="width: 30px; height: 30px;">
+         </div> 
+    
+        <div class="name">  {{creator.name}} </div>
+   
+         <div class="date">
+         <small>{{ date createdAt "HH:mm, DD/MM"}}</small>
+         </div>
+      <div class="content">
+    <div style="color:#f983d6;">{{content}}</div>
+ </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+ 
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+

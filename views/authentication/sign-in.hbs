@@ -1,0 +1,23 @@
+<div class="page">
+  <div class="subpage">
+<div class="container" style="margin:0 auto;">
+
+<h3 class="center-h lh-1 mt-5">BENVINDO(A) DE VOLTA!</h3>
+
+<form method="POST" class="sign-in-form" >
+    <div class="form-group">
+  <label for="input-email">Email</label>
+  <input id="input-email" type="email" class="form-control" name="email" required  minlength="5" />
+  </div>
+      <div class="form-group">
+  <label for="input-password">Password</label>
+  <input id="input-password" type="password" class="form-control"  name="password" required  minlength="7" maxLength="20" />
+</div>
+  <button>LOGIN</button>
+</form>
+
+{{#if error}}
+  <p>Ocorreu um erro a fazer o login</p>
+{{/if}}
+</div>
+</div></div>
