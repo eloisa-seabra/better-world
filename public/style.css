@@ -104,7 +104,7 @@ label {
 .text-home {
   color: white;
   font-size: 14px;
-  padding: 20px 30px; }
+  padding: 20px 20px; }
   .text-home .text-stroke {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black; }
@@ -1023,11 +1023,13 @@ header {
     z-index: auto;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.356); }
+  .centered-text {
+    margin: 10px 40px 10px 10px; }
   .text-home {
     z-index: auto;
     color: white;
-    font-size: 12px;
-    padding: 10px 30px; }
+    font-size: 10px;
+    padding: 10px 40px 10px 10px; }
     .text-home .text-stroke {
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: black; }
