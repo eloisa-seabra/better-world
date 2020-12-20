@@ -117,15 +117,15 @@ label {
   color: white;
   font-size: 14px;
   padding: 20px 20px;
+}
 
-  .text-stroke {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-  }
-  .text-stroke-white {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-  }
+#text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+#text-stroke-white {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 .overlay-pink-button {
