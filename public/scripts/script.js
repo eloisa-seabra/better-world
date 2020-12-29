@@ -7,7 +7,8 @@ function closeNav() {
 }
 /* set time out each 10 seconds
 
-*/
+
 window.setTimeout(function () {
   window.location.reload();
 }, 10000);
+*/
